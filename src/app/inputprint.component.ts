@@ -1,25 +1,23 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
-import { PrintEntryComponent } from './print-entry.component';
+@Component({
+  selector: 'app-print-entry',
+  templateUrl: './print-entry.component.html',
+  styleUrls: ['./print-entry.component.css']
+})
+export class PrintEntryComponent implements OnInit {
 
-describe('PrintEntryComponent', () => {
-  let component: PrintEntryComponent;
-  let fixture: ComponentFixture<PrintEntryComponent>;
+  @Output() PrintClicked = new EventEmitter<any>();
+  flag;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PrintEntryComponent ]
-    })
-    .compileComponents();
-  }));
+  onPrint(){
+    this.flag = print;
+    this.PrintClicked.emit({mode: this.flag});
+  }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PrintEntryComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  constructor() { }
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  ngOnInit() {
+  }
+
+}
