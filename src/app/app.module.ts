@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { DataEntryComponent } from './data-entry/data-entry.component';
-import { AddEntryComponent } from './add-entry/add-entry.component';
-import { PrintEntryComponent } from './print-entry/print-entry.component';
-import { DisplayComponent } from './display/display.component';
+import { DataEntryComponent } from './inputdata.component';
+import { AddEntryComponent } from './inputadd.component';
+import { PrintEntryComponent } from './inputprint.component';
+import { DisplayComponent } from './display.component';
 
 @NgModule({
   declarations: [
